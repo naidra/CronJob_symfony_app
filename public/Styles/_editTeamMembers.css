@@ -1,0 +1,125 @@
+.edit-team-members-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 75px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 30px;
+}
+
+.edit-team-members-title-info-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: sticky;
+    top: 75px;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.edit-team-members-modal {
+    display: none;
+    position: fixed;
+    z-index: 5;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.edit-team-members-modal-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: unset;
+    transform: translate(5px, 29px);
+    aspect-ratio: 2 / 1;
+    border-radius: 10px;
+}
+
+.edit-team-members-modal-close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    align-self: flex-start;
+}
+
+.edit-team-members-modal-close:hover,
+.edit-team-members-modal-close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.edit-team-members-title {
+    font-size: 40px;
+}
+
+.edit-team-members-info-button {
+    height: 50px;
+    width: 50px;
+    border: 1px solid rgba(196, 196, 196, 1);
+    border-radius: 100%;
+    font-size: 30px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.edit-team-members-info-button:hover {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(38, 74, 150, 1);
+    transition: .3s ease-in-out;
+}
+
+.edit-team-members-info-button:active {
+    transform: scale(0.90);
+}
+
+.edit-team-members-table-container{
+    width: 100%;
+    margin-top: 80px ;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 30px;
+}
+
+.edit-team-members-table-left-container {
+    padding-left: 10px;
+    padding-right: 0px;
+}
+
+.edit-team-members-table-right-container {
+    padding-left: 0px;
+    padding-right: 10px;
+}
+
+
+.edit-team-members-table-container table {
+    text-align: left;
+    position: relative;
+}
+  
+.edit-team-members-table-left-container th {
+    background: white;
+    white-space: pre;
+}
+
+.edit-team-members-table-container th {
+    background: white;
+    white-space: pre;
+    box-shadow: inset 0px -2px 2px -2px #333;
+    transition: all .07s ease;
+}

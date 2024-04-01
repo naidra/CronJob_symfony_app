@@ -1,0 +1,327 @@
+.preasuregarments-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 75px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 30px;
+}
+
+.preasuregarments-title-info-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: sticky;
+    top: 75px;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.preasuregarments-modal {
+    display: none;
+    position: fixed;
+    z-index: 5;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.preasuregarments-modal-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: unset;
+    transform: translate(5px, 29px);
+    aspect-ratio: 2 / 1;
+    border-radius: 10px;
+}
+
+.preasuregarments-modal-close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    align-self: flex-start;
+}
+
+.preasuregarments-modal-close:hover,
+.preasuregarments-modal-close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.preasuregarments-title {
+    font-size: 40px;
+}
+
+.preasuregarments-info-button {
+    height: 50px;
+    width: 50px;
+    border: 1px solid rgba(196, 196, 196, 1);
+    border-radius: 100%;
+    font-size: 30px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.preasuregarments-info-button:hover {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(38, 74, 150, 1);
+    transition: .3s ease-in-out;
+}
+
+.preasuregarments-info-button:active {
+    transform: scale(0.90);
+}
+
+.preasuregarments-label-input-container {
+    margin: 10px !important;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    align-items: center;
+    justify-content: center;
+}
+
+.preasuregarments-notes-label-input-container {
+    margin: 10px !important;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    justify-content: center;
+}
+
+.preasuregarments-label-number-input-container {
+    margin: 10px !important;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    align-items: center;
+    justify-content: center;
+}
+
+.preasuregarments-label {
+    grid-area: 1 / 1 / 2 / 2;
+    text-decoration: none;
+    margin: 0px;
+    margin-right: 20px;
+    padding: 2px;
+}
+
+.preasuregarments-label-number {
+    grid-area: 1 / 1 / 2 / 2;
+    text-decoration: none;
+    margin: 0px;
+    margin-right: 20px;
+    padding: 2px;
+}
+
+.preasuregarments-input {
+    grid-area: 1 / 2 / 2 / 5;
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+}
+
+.preasuregarments-input-notes {
+    grid-area: 1 / 2 / 2 / 5;
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 10px;
+    height: 200px;
+    width: 100%;
+}
+
+.preasuregarments-input-number {
+    grid-area: 1 / 2 / 2 / 4;
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+}
+
+.preasuregarments-button-number {
+    grid-area: 1 / 4 / 2 / 5;
+    margin-left: 80px;
+    margin-right: 20px;
+    height: 45px;
+    color: rgba(0, 0, 0, 1);
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid rgb(196, 196, 196);
+    font-size: 25px;
+}
+
+.preasuregarments-button-number:hover {
+    transition: 0.3s;
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(38, 74, 150, 1);
+}
+
+.preasuregarments-button-number:active {
+    transform: scale(0.90);
+}
+
+.preasuregarments-select {
+    grid-area: 1 / 2 / 2 / 5;
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+}
+
+.preasuregarments-label-1 {
+    grid-area: 1 / 1 / 2 / 2;
+    text-decoration: none;
+    margin: 0px;
+    margin-right: 20px;
+    padding: 2px;
+}
+
+.preasuregarments-input-1 {
+    grid-area: 1 / 2 / 2 / 3;
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    width: 100%;
+    padding: 10px;
+}
+
+.preasuregarments-label-2 {
+    grid-area: 1 / 3 / 2 / 4;
+    text-decoration: none;
+    margin: 0px;
+    margin-right: 20px;
+    padding: 2px;
+    padding-left: 20px;
+}
+
+.preasuregarments-input-2 {
+    grid-area: 1 / 4 / 2 / 5;
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    width: 100%;
+    padding: 10px;
+}
+
+.preasuregarments-submit-btn {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 1.0) 50%, #264a96 50%);
+    background-size: 200% 100%;
+    background-position: 200% 0;
+    transition: background-position .4s ease;
+    width: 80% !important;
+    padding: 5px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    border: 1px solid #264a96;
+    border-radius: 10px;
+    color: #264a96;
+    box-shadow: 0px 2px 6px -1px rgba(0, 0, 0, 0.13);
+    outline: 0;
+    align-self: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    transition: 0.3s;
+    will-change: transform;
+}
+
+.preasuregarments-submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px -2px rgba(182, 157, 230, 0.95);
+    background-position: 100% 0;
+    color: rgb(255, 255, 255);
+    transition: 0.3s;
+}
+
+.preasuregarments-submit-btn:hover:active {
+    transform: scale(0.99);
+}
+
+.venoTrain-preasureGarments{
+    position:absolute;
+    border-width:0px;
+    background-color:transparent;
+    width:14.7%;
+    text-align:center;
+}
+
+.preasureGarments-page-reset-button {
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    width: 100%;
+    height: 46px;
+    transition: .3s ease-in-out;
+    margin: 0;
+    padding: 0px;
+    background-color: rgba(255, 255, 255, 1);
+    color:rgba(38, 74, 150, 1);
+}
+
+.preasureGarments-page-reset-button:hover {
+    color: rgba(38, 74, 150, 1);
+    border: 1px solid rgba(38, 74, 150, 1);
+}
+
+.preasureGarments-page-reset-button:active {
+    transform: scale(0.90);
+}
+
+.venoTrain-preasureGarments-1{ top:7%;right:1%;height:8.8%; }
+.venoTrain-preasureGarments-2{ top:15.9%;right:1%;height:9.1%; }
+.venoTrain-preasureGarments-3{ top:29.4%;left:2.7%;height:3.3%;width:17.2%; }
+.venoTrain-preasureGarments-4{ top:29.4%;right:20%;height:3.3%;width:17.2%; }
+.venoTrain-preasureGarments-5{ top:35%;left:2.7%;height:3.3%;width:17.2%; }
+.venoTrain-preasureGarments-6{ top:35%;right:20%;height:3.3%;width:17.2%; }
+.venoTrain-preasureGarments-7{ top:43.6%;left:2.7%;height:3.3%;width:17.2%; }
+.venoTrain-preasureGarments-8{ top:43.6%;right:20%;height:3.3%;width:17.2%; }
+.venoTrain-preasureGarments-9{ top:48.8%;left:2.7%;height:3.3%;width:17.2%; }
+.venoTrain-preasureGarments-10{ top:48.8%;right:20%;height:3.3%;width:17.2%; }
+.venoTrain-preasureGarments-11{ top:54.7%;left:2.7%;height:3.3%;width:17.2%; }
+.venoTrain-preasureGarments-12{ top:54.7%;right:20%;height:3.3%;width:17.2%; }
+.venoTrain-preasureGarments-13{ top:61.1%;left:2.7%;height:3.3%;width:17.2%; }
+.venoTrain-preasureGarments-14{ top:61.1%;right:20%;height:3.3%;width:17.2%; }
+.venoTrain-preasureGarments-15{ top:66.5%;left:2.7%;height:3.3%;width:17.2%; }
+.venoTrain-preasureGarments-16{ top:66.5%;right:20%;height:3.3%;width:17.2%; }
+.venoTrain-preasureGarments-17{ top:71.3%;left:2.7%;height:3.3%;width:17.2%; }
+.venoTrain-preasureGarments-18{ top:71.3%;right:20%;height:3.3%;width:17.2%; }
+.venoTrain-preasureGarments-19{ bottom:21.2%;left:2.7%;height:3.3%;width:12.7%; }
+.venoTrain-preasureGarments-20{ bottom:21.2%;right:20%;height:3.3%;width:12.7%; }
+.venoTrain-preasureGarments-21{ bottom:12.6%;left:36.1%;height:3.3%;width:10.3%; }
+.venoTrain-preasureGarments-22{ bottom:10.3%;left:50.5%;height:3.3%;width:7.7%; }
+.venoTrain-preasureGarments-23{ bottom:1.7%;left:50.5%;height:3.3%;width:13.2%; }
+
+
+.preasureGarments-product-parameters-button{
+    border:1px solid rgb(196, 196, 196);
+    border-radius:10px;
+    height:46px;
+    transition:.3s ease-in-out;
+    margin:0;
+    padding:0px 15px;
+    background-color:rgba(255, 255, 255, 1);
+    color:rgba(38, 74, 150, 1);
+}
+
+.preasureGarments-product-parameters-button:hover{
+    color: rgba(38, 74, 150, 1);
+    border: 1px solid rgba(38, 74, 150, 1);
+}

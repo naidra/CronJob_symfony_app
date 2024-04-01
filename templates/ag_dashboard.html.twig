@@ -1,0 +1,100 @@
+{% extends 'ag_base/backend.html.twig' %}
+
+{% block body_params %}class="skin-black"{% endblock %}
+
+{% block container %}
+   
+
+<div class="with-left-padd">
+    <div class="container">
+        <div class="dashboard-page p-2 p-md-5 pt-5">
+            <div class="row">
+                <div class="col-lg-6 col-xl-4 pb-4 mb-2">
+                    <div class="box rounded bg-white h-100 py-4 m-0">
+                        <h4 class="mb-4">Information</h4>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-4 pb-4 mb-2">
+                    <div class="box rounded service-center h-100 py-4 m-0">
+                        {# <div class="row"><div class="col-4 mb-3"><img class="d-block w-100" src="{{ app.asset_path }}/images/EinkaufIcon(weiss).png" /></div></div> #}
+                        <h4 class="m-0 p-0">Noxolo Service Center</h4>
+                        <p class="mb-3">Sie erreichen uns rund um die Uhr</p>
+                        <p class="h5 m-0">+488&nbsp;123456789</p>
+                        <p class="h5">kontakt@noxolo.de</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-4 pb-4 mb-2">
+                    <div class="box rounded bg-white h-100 py-4 m-0">
+                        <h4 class="mb-4">Meldungen</h4>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-4 pb-4 mb-2">
+                    <div class="box rounded bg-white h-100 py-4 m-0">
+                        <h4>Termine</h4>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-4 pb-4 mb-2">
+                    <div class="box rounded wetter bg-white h-100 py-4 m-0">
+                        <div class="d-flex justify-content-between">
+                            <h4 class="mb-4">Wetter</h4>
+                            <div class="text-center">
+                                <p class="font-weight-500 mb-0">Heute</p>
+                                <p class="h3">18°</p>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between flex-wrap mb-5 pb-3">
+                            <svg class="svg-icon"><use xlink:href="#svg-cloud-symbol" /></svg>
+                            <div>
+                                <h4 class="m-0 text-danger">Unwetterwarnung</h4>
+                                <small>Starkregen, Gewitter und starke Windböhen</small>
+                            </div>
+                        </div>
+                        <p class="border-top p-0 my-3"></p>
+                        <div class="list-of-days d-flex justify-content-between overflow-auto mb-0 mb-md-3">
+                            <div class="day">
+                                <p class="m-0">Mo</p>
+                                <svg class="svg-icon small"><use xlink:href="#svg-cloud-symbol" /></svg>
+                            </div>
+                            <div class="day">
+                                <p class="m-0">Di</p>
+                                <svg class="svg-icon small"><use xlink:href="#svg-cloud-symbol" /></svg>
+                            </div>
+                            <div class="day">
+                                <p class="m-0">Mi</p>
+                                <svg class="svg-icon small"><use xlink:href="#svg-cloud-symbol" /></svg>
+                            </div>
+                            <div class="day">
+                                <p class="m-0">Do</p>
+                                <svg class="svg-icon small"><use xlink:href="#svg-cloud-symbol" /></svg>
+                            </div>
+                            <div class="day">
+                                <p class="m-0">Fr</p>
+                                <svg class="svg-icon small"><use xlink:href="#svg-cloud-symbol" /></svg>
+                            </div>
+                            <div class="day">
+                                <p class="m-0">Sa</p>
+                                <svg class="svg-icon small"><use xlink:href="#svg-cloud-symbol" /></svg>
+                            </div>
+                            <div class="day">
+                                <p class="m-0">So</p>
+                                <svg class="svg-icon small"><use xlink:href="#svg-cloud-symbol" /></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-4 pb-4 mb-2">
+                    <div class="box rounded bg-white h-100 py-4 m-0">
+                        <h4 class="mb-4">Service Aufgaben</h4>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-4 pb-4 mb-2">
+                    <div class="box rounded bg-white h-100 py-4 m-0">
+                        <h4 class="mb-4">Historie</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

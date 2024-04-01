@@ -1,0 +1,8 @@
+twig:
+    default_path: '%kernel.project_dir%/templates'
+    globals:
+        D_B: '@App\Controller\DBConnect'
+
+when@test:
+    twig:
+        strict_variables: true

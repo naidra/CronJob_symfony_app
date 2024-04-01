@@ -1,0 +1,130 @@
+.production-label-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 45px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 30px;
+}
+
+.production-label-title-info-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.production-label-modal {
+    display: none;
+    position: fixed;
+    z-index: 5;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.production-label-modal-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: unset;
+    transform: translate(5px, 29px);
+    aspect-ratio: 2 / 1;
+    border-radius: 10px;
+}
+
+.production-label-modal-close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    align-self: flex-start;
+}
+
+.production-label-modal-close:hover,
+.production-label-modal-close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.production-label-title {
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+.production-label-info-button {
+    height: 50px;
+    width: 50px;
+    border: 1px solid rgba(196, 196, 196, 1);
+    border-radius: 100%;
+    font-size: 30px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.production-label-info-button:hover {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(38, 74, 150, 1);
+    transition: .3s ease-in-out;
+}
+
+.production-label-info-button:active {
+    transform: scale(0.90);
+}
+
+.production-label-title-info-container-aligment {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.production-label-input-label-container{
+    margin: 10px !important;
+    display: grid;
+    grid-template-columns: 1.5fr repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    align-items: center;
+}
+
+.production-label-lable{
+    grid-area: 1 / 1 / 2 / 2;
+    text-decoration: none;
+    margin: 0px;
+    margin-right: 20px;
+    padding: 2px;
+} 
+
+.production-label-input {
+    grid-area: 1 / 2 / 2 / 5; 
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+}
+
+.production-label-barcode-container {
+    display: flex;
+    margin-top: 20px;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.production-label-barcode-container [id="barcode_for_print"] {
+    height: 100px !important;
+    width: auto;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>DASH System - Mobile user</title>
+		<link rel="stylesheet" href="{{ asset('Lib/fontawesome/css/all.min.css') }}" />
+        <link rel="stylesheet" href="{{ asset('Lib/fontawesome/css/fontawesome.min.css') }}" />
+        <link rel="stylesheet" href="{{ asset('Lib/bootstrap-icons/index.css') }}" />
+        <link rel="stylesheet" href="{{ asset('Lib/bootstrap/bootstrap.min.css') }}" />
+        <link rel="stylesheet" href="{{ asset('Lib/air-datepicker/air-datepicker.css') }}" />
+        <link rel="stylesheet" href="{{ asset('Styles/index.css') }}" />
+        <script src="{{ asset('Scripts/jquery-3.4.1.min.js') }}" defer></script>
+        <script src="{{ asset('Lib/bootstrap/bootstrap.bundle.min.js') }}" defer></script>
+        <script src="{{ asset('css/bootstrap/js/popper.min.js') }}" defer></script>
+        <script src="{{ asset('Scripts/jquery-ui-1.10.3.min.js') }}" defer></script>
+        <script src="{{ asset('Scripts/jquery-confirm.min.js') }}" defer></script>
+        <script src="{{ asset('Scripts/jquery.dataTables.min.js') }}" defer></script>
+        <script src="{{ asset('css/js-snackbar/index.js') }}" defer></script>
+		<link rel="icon" type="image/x-icon" href="{{ asset('images/Dash_tab_logo.png') }}"/>
+	</head>
+
+	<body class="dash-view">
+		<div class="page-wrapper d-flex flex-column">
+            <div class="log-in-container">
+                <div class="session">
+                    <div class="right">
+                        <form class="log-in" method="post">
+                            <h4 class="log-in-card-title">We are 
+                                <span class="log-in-card-title-name-highlight">Schedule board</span>
+                            </h4>
+                            <p class="log-in-card-content">Welcome back!</p>
+                            {% include 'ag_alerts.html.twig' %}
+                            {% if error %}
+                                <div class="alert alert-danger border-0 bg-transparent p-0">&#x2022; {{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                            {% endif %}
+
+                            {% if app.user %}
+                                <div class="mb-3">
+                                    You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+                                </div>
+                            {% endif %}
+                            <div class="floating-label">
+                                <input class="form-input form-control" type="email" value="{{ last_username }}" name="email" id="inputEmail" autocomplete="email" placeholder="" required autofocus />
+                                <label class="form-label" for="inputEmail">Email:</label>
+                                <div class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="floating-label">
+                                <input class="form-input form-control" type="password" name="password" id="inputPassword" autocomplete="current-password" placeholder="" required />
+                                <label class="form-label" for="inputPassword">Password:</label>
+                                <div class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-lock" viewBox="0 0 16 16">
+                                        <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+                            <button class="log-in-button" type="submit">Log in</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            Array.from(document.querySelectorAll('.alert .close')).forEach(button => button.addEventListener('click', function (e) {
+                button.parentNode.remove();
+            }));
+        </script>
+    </body>
+</html>

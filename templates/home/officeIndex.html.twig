@@ -1,0 +1,66 @@
+{% extends 'ag_base/backend.html.twig' %}
+{% block javascripts %}
+	{{ parent() }}
+	<!-- page script -->
+{% endblock %}
+
+{% block container %}
+	<div class="statistics-container">  
+        <div id="Modal" class="statistics-modal">
+            <div class="container">
+				<div class="row justify-content-lg-end">
+					<div class="col-lg-9 px-lg-5 pt-lg-4">
+						<div class="patient-data-modal-content">
+							<div>
+								<h3 class="mb-3">Information Data</h3>
+								<p>Home page data</p>
+							</div>
+							<span id="Close_span" class="statistics-modal-close">&times;</span>
+						</div>
+					</div>
+				</div>
+			</div>
+        </div>
+        <div class="statistics-title-info-container px-md-3">
+            <h3 class="statistics-title">Home</h3>
+        </div>
+        <div class="statistics-container-grid">
+            <a href="{{ path('search_page') }}" class="statistics-product-image-link-container-1 bg-dark-grey p-0">
+                <div class="d-flex flex-column align-items-center justify-content-center h-100 pt-2">
+                    <svg class="my-4 py-4"><use xlink:href="#search" fill="#fff" /></svg>
+                    <h3 class="text-white mb-4 pb-2">Search</h3>
+                </div>
+            </a>
+            <a href="{{ path('patientdata_page') }}" class="statistics-product-image-link-container-2 bg-dark-grey p-0">
+                <div class="d-flex flex-column align-items-center justify-content-center h-100 pt-2">
+                    <svg class="my-4 py-4"><use xlink:href="#patient-data" fill="#fff" /></svg>
+                    <h3 class="text-white mb-4 pb-2">Patient Data</h3>
+                </div>
+            </a>
+            <a href="{{ path('patient_appointments_page') }}" class="statistics-product-image-link-container-3 bg-dark-grey p-0">
+                <div class="d-flex flex-column align-items-center justify-content-center h-100 pt-2">
+                    <svg class="my-4 py-4"><use xlink:href="#production-planning" fill="#fff" /></svg>
+                    <h3 class="text-white mb-4 pb-2">Patient Appointments</h3>
+                </div>
+            </a>
+            <a href="{{ path('tasksToComplete_mainTable_page') }}" class="statistics-product-image-link-container-4 bg-dark-grey p-0">
+                <div class="d-flex flex-column align-items-center justify-content-center h-100 pt-2">
+                    <svg class="my-4 py-4"><use xlink:href="#tasks-to-complete" fill="#fff" /></svg>
+                    <h3 class="text-white mb-4 pb-2">Task to Complete</h3>
+                </div>
+            </a>
+            <a href="{{ path('productionOverview_page') }}" class="statistics-product-image-link-container-5 bg-dark-grey p-0">
+                <div class="d-flex flex-column align-items-center justify-content-center h-100 pt-2">
+                    <svg class="my-4 py-4"><use xlink:href="#production" fill="#fff" /></svg>
+                    <h3 class="text-white mb-4 pb-2">Production</h3>
+                </div>
+            </a>
+            <a href="{{ path('statistics_page') }}" class="statistics-product-image-link-container-6 bg-dark-grey p-0">
+                <div class="d-flex flex-column align-items-center justify-content-center h-100 pt-2">
+                    <svg class="my-4 py-4"><use xlink:href="#statistics" fill="#fff" /></svg>
+                    <h3 class="text-white mb-4 pb-2">Statistics</h3>
+                </div>
+            </a>
+        </div>
+    </div>
+{% endblock %}

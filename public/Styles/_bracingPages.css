@@ -1,0 +1,1326 @@
+.bracing-pages-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 75px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 30px;
+}
+
+.bracing-pages-title-info-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: sticky;
+    top: 75px;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.bracing-pages-modal {
+    display: none;
+    position: fixed;
+    z-index: 5;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.bracing-pages-modal-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: unset;
+    transform: translate(5px, 29px);
+    /* aspect-ratio: 2 / 1; */
+    border-radius: 10px;
+}
+
+.bracing-pages-modal-close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    align-self: flex-start;
+}
+
+.bracing-pages-modal-close:hover,
+.bracing-pages-modal-close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.bracing-pages-title {
+    font-size: 40px;
+}
+
+.bracing-pages-info-button {
+    height: 50px;
+    width: 50px;
+    border: 1px solid rgba(196, 196, 196, 1);
+    border-radius: 100%;
+    font-size: 30px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.bracing-pages-info-button:hover {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(38, 74, 150, 1);
+    transition: .3s ease-in-out;
+}
+
+.bracing-pages-info-button:active {
+    transform: scale(0.90);
+}
+
+.bracing-pages-label-input-container-aligment {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.bracing-pages-title-container-2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: 100%;
+}
+
+.bracing-pages-title-1 {
+    grid-area: 1 / 1 / 2 / 2;
+    text-decoration: none;
+    margin: 0px;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding: 2px;
+}
+
+.bracing-pages-title-2 {
+    grid-area: 1 / 3 / 2 / 4;
+    text-decoration: none;
+    margin: 0px;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding: 2px;
+}
+
+.bracing-pages-label-input-container-row-1 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin-top: 21px;
+}
+
+.bracing-pages-label-input-container-row-2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin-top: 10px;
+}
+
+.bracing-pages-buttons-container-row-3 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+.bracing-pages-label-1 {
+    grid-area: 1 / 1 / 2 / 2;
+    text-decoration: none;
+    margin: 0px;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bracing-pages-input-1 {
+    grid-area: 1 / 2 / 2 / 3;
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 10px;
+    width: 90%;
+}
+
+.bracing-pages-checkbox-container {
+    grid-area: 1 / 2 / 2 / 3;
+    padding: 10px;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.bracing-pages-checkbox-left-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.bracing-pages-checkbox-right-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.bracing-pages-checkbox-left-label {
+    padding-right: 5px;
+    align-self: center;
+}
+
+.bracing-pages-checkbox-left-input {
+    margin: 0px;
+    padding: 0px;
+    align-self: center;
+}
+
+.bracing-pages-checkbox-right-label {
+    padding-right: 5px;
+    align-self: center;
+}
+
+.bracing-pages-checkbox-right-input {
+    margin: 0px;
+    padding: 0px;
+    align-self: center;
+}
+
+.bracing-pages-input-select {
+    grid-area: 1 / 4 / 2 / 5;
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 10px;
+    width: 90%;
+    height: 46px;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: none;
+}
+
+/* .bracing-pages-input-select-2 {
+    grid-area: 1 / 4 / 2 / 5;
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 10px;
+    width: 90%;
+    height: 46px;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: none;
+} */
+
+.bracing-pages-label-2 {
+    grid-area: 1 / 3 / 2 / 4;
+    text-decoration: none;
+    margin: 0px;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bracing-pages-input-2 {
+    grid-area: 1 / 4 / 2 / 5;
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 10px;
+    width: 90%;
+}
+
+.bracing-pages-upload-pdf-button-container {
+    grid-area: 1 / 1 / 2 / 3;
+    flex-direction: row;
+    margin: 0 10px 0 0;
+}
+
+.bracing-pages-upload-pdf-button {
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    width: 100%;
+    height: 46px;
+    transition: .3s ease-in-out;
+    margin: 0;
+    padding: 0px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.bracing-pages-upload-pdf-button:hover {
+    color: rgba(38, 74, 150, 1);
+    border: 1px solid rgba(38, 74, 150, 1);
+}
+
+.bracing-pages-upload-pdf-button:hover:active {
+    transform: scale(0.90);
+    transition: .3s ease-in-out;
+}
+
+
+.bracing-pages-download-pdf-button-container {
+    grid-area: 1 / 3 / 5 / 5;
+    flex-direction: row;
+    margin: 0 0 0 10px;
+}
+
+.bracing-pages-download-pdf-button {
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    width: 100%;
+    height: 46px;
+    transition: .3s ease-in-out;
+    margin: 0px;
+    padding: 0px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.bracing-pages-download-pdf-button:hover {
+    color: rgba(38, 74, 150, 1);
+    border: 1px solid rgba(38, 74, 150, 1);
+}
+
+.bracing-pages-download-pdf-button:hover:active {
+    transform: scale(0.90);
+    transition: .3s ease-in-out;
+}
+
+.pdf-version-container-aligment {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.pdf-version-container {
+    width: 95%;
+    border: 1px solid rgb(196, 196, 196);
+    margin-left: 20px;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    overflow: auto;
+}
+
+.pdf-version-body {
+    height: 100%;
+    width: 18%;
+    min-width: 191px !important;
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    min-width: fit-content;
+    padding: 0px 5px;
+    transition: .3s ease-in-out;
+    position: relative;
+}
+
+.pdf-version-body:active {
+    transform: scale(90%);
+    transition: .3s ease-in-out;
+}
+
+.pdf-version-title-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.pdf-version-title {
+    color: rgba(50, 50, 50, 1);
+    font-weight: 300;
+    margin: 0px;
+}
+
+.pdf-version-version-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.pdf-version-version {
+    color: rgba(50, 50, 50, 1);
+    font-weight: 300;
+}
+
+.pdf-version-date-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.pdf-version-date {
+    color: rgba(50, 50, 50, 1);
+    font-weight: 300;
+}
+
+.bracing-pages-table {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+.bracing-pages-table-header {
+    padding: 10px;
+    margin: 0px;
+    font-size: 20px;
+}
+
+.bracing-pages-table-data-label {
+    border: 1px solid rgb(196, 196, 196);
+    padding: 10px;
+}
+
+.bracing-pages-table-data-checkbox-label {
+    margin: 0px;
+    font-size: 15px;
+}
+
+.bracing-pages-table-data-input-container {
+    border: 1px solid rgb(196, 196, 196);
+}
+
+.bracing-pages-table-data-input {
+    border: none;
+    padding: 10px;
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+    font-size: 15px;
+}
+
+.bracing-pages-table-data-checkbox-container {
+    border: 1px solid rgb(196, 196, 196);
+    padding: 10px;
+    margin: auto;
+}
+
+.bracing-pages-table-data-checkbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    width: 70%;
+}
+
+.bracing-pages-table-data-checkbox-label {
+    margin: 0px;
+    font-size: 15px;
+    align-self: center;
+}
+
+.bracing-pages-table-data-checkbox-input {
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+    align-self: center;
+    cursor: pointer;
+}
+
+.bracing-genuTrain-page-form-container {
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+}
+
+.bracing-genuTrain-page-form-image {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.bracing-genuTrain-page-form-1 {
+    position: absolute;
+    top: 18.25%;
+    right: 36%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.bracing-genuTrain-page-form-2 {
+    position: absolute;
+    top: 18.25%;
+    right: 2%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.bracing-genuTrain-page-form-3 {
+    position: absolute;
+    top: 29.5%;
+    right: 36%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.bracing-genuTrain-page-form-4 {
+    position: absolute;
+    top: 29.5%;
+    right: 2%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.bracing-genuTrain-page-form-5 {
+    position: absolute;
+    top: 48%;
+    right: 36%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.bracing-genuTrain-page-form-6 {
+    position: absolute;
+    top: 63.5%;
+    right: 36%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.bracing-genuTrain-page-form-7 {
+    position: absolute;
+    top: 63.5%;
+    right: 2%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.bracing-genuTrain-page-form-8 {
+    position: absolute;
+    top: 74.75%;
+    right: 36%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.bracing-genuTrain-page-form-9 {
+    position: absolute;
+    top: 74.75%;
+    right: 2%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.bracing-genuTrain-page-form-10 {
+    position: absolute;
+    top: 81.5%;
+    right: 36%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.bracing-genuTrain-page-form-11 {
+    position: absolute;
+    top: 81.5%;
+    right: 2%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+
+
+
+.bracing-genuTrain-S-pro-page-form-container {
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+}
+
+.bracing-genuTrain-S-pro-page-form-image {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.bracing-genuTrain-S-pro-page-form-1 {
+    position: absolute;
+    top: 17.25%;
+    right: 45%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.bracing-genuTrain-S-pro-page-form-2 {
+    position: absolute;
+    top: 17.25%;
+    right: 2%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 16%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.bracing-genuTrain-S-pro-page-form-3 {
+    position: absolute;
+    top: 28.5%;
+    right: 45%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.bracing-genuTrain-S-pro-page-form-4 {
+    position: absolute;
+    top: 28.5%;
+    right: 2%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.bracing-genuTrain-S-pro-page-form-5 {
+    position: absolute;
+    top: 46.5%;
+    right: 45%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.bracing-genuTrain-S-pro-page-form-6 {
+    position: absolute;
+    top: 62%;
+    right: 45%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.bracing-genuTrain-S-pro-page-form-7 {
+    position: absolute;
+    top: 62%;
+    right: 2%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.bracing-genuTrain-S-pro-page-form-8 {
+    position: absolute;
+    top: 73%;
+    right: 45%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.bracing-genuTrain-S-pro-page-form-9 {
+    position: absolute;
+    top: 73%;
+    right: 2%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.bracing-genuTrain-S-pro-page-form-10 {
+    position: absolute;
+    top: 84%;
+    right: 45%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.bracing-genuTrain-S-pro-page-form-11 {
+    position: absolute;
+    top: 84%;
+    right: 2%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+
+
+
+.bracing-genuTrain-S-page-form-container {
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+}
+
+.bracing-genuTrain-S-page-form-image {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.bracing-genuTrain-S-page-form-1 {
+    position: absolute;
+    top: 19.5%;
+    right: 45%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.bracing-genuTrain-S-page-form-2 {
+    position: absolute;
+    top: 19.5%;
+    right: 2%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 16%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.bracing-genuTrain-S-page-form-3 {
+    position: absolute;
+    top: 30.5%;
+    right: 45%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.bracing-genuTrain-S-page-form-4 {
+    position: absolute;
+    top: 30.5%;
+    right: 2%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.bracing-genuTrain-S-page-form-5 {
+    position: absolute;
+    top: 48.5%;
+    right: 45%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.bracing-genuTrain-S-page-form-6 {
+    position: absolute;
+    top: 63.75%;
+    right: 45%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.bracing-genuTrain-S-page-form-7 {
+    position: absolute;
+    top: 63.75%;
+    right: 2%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.bracing-genuTrain-S-page-form-8 {
+    position: absolute;
+    top: 74.75%;
+    right: 45%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.bracing-genuTrain-S-page-form-9 {
+    position: absolute;
+    top: 74.75%;
+    right: 2%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.bracing-genuTrain-S-page-form-10 {
+    position: absolute;
+    top: 85.75%;
+    right: 45%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.bracing-genuTrain-S-page-form-11 {
+    position: absolute;
+    top: 85.75%;
+    right: 2%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+
+
+
+
+.bracing-genuTrain-P3-page-form-container {
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+}
+
+.bracing-genuTrain-P3-page-form-image {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.bracing-genuTrain-P3-page-form-1 {
+    position: absolute;
+    top: 21.75%;
+    right: 33%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.bracing-genuTrain-P3-page-form-2 {
+    position: absolute;
+    top: 21.75%;
+    right: 2%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18.2%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.bracing-genuTrain-P3-page-form-2[name$='_pdf'] {
+    position: absolute;
+    top: 22%;
+    right: 2%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 10px 0px 0px;
+    width: 18.2%;
+    height: 3.7%;
+    text-align: center;
+}
+
+.bracing-genuTrain-P3-page-form-3 {
+    position: absolute;
+    top: 32.25%;
+    right: 33%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.bracing-genuTrain-P3-page-form-4 {
+    position: absolute;
+    top: 32.25%;
+    right: 2%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.bracing-genuTrain-P3-page-form-5 {
+    position: absolute;
+    top: 49.5%;
+    right: 33%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.bracing-genuTrain-P3-page-form-6 {
+    position: absolute;
+    top: 64.25%;
+    right: 33%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.bracing-genuTrain-P3-page-form-7 {
+    position: absolute;
+    top: 64.25%;
+    right: 2%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.bracing-genuTrain-P3-page-form-8 {
+    position: absolute;
+    top: 74.75%;
+    right: 33%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.bracing-genuTrain-P3-page-form-9 {
+    position: absolute;
+    top: 74.75%;
+    right: 2%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.bracing-genuTrain-P3-page-form-10 {
+    position: absolute;
+    top: 85.5%;
+    right: 33%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.bracing-genuTrain-P3-page-form-11 {
+    position: absolute;
+    bottom: 10.9%;
+    right: 2%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.bracing-genuTrain-P3-page-form-11[name$='_pdf'] {
+    position: absolute;
+    bottom: 10.7%;
+    right: 2%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 20px 0px 0px;
+    width: 18%;
+    height: 4.4%;
+    text-align: center;
+}
+
+
+.bracing-epitrain-page-form-container {
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+}
+
+.bracing-epitrain-page-form-image {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.bracing-epitrain-page-form-1 {
+    position: absolute;
+    top: 22.75%;
+    right: 36%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.bracing-epitrain-page-form-2 {
+    position: absolute;
+    top: 22.75%;
+    right: 2%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.bracing-epitrain-page-form-3 {
+    position: absolute;
+    top: 36%;
+    right: 36%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.bracing-epitrain-page-form-4 {
+    position: absolute;
+    top: 36%;
+    right: 2%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.bracing-epitrain-page-form-5 {
+    position: absolute;
+    top: 49.5%;
+    right: 36%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.bracing-epitrain-page-form-6 {
+    position: absolute;
+    top: 63%;
+    right: 36%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.bracing-epitrain-page-form-7 {
+    position: absolute;
+    top: 63%;
+    right: 2%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.bracing-epitrain-page-form-8 {
+    position: absolute;
+    top: 76.5%;
+    right: 36%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.bracing-epitrain-page-form-9 {
+    position: absolute;
+    top: 76.5%;
+    right: 2%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+
+
+
+.bracing-malleotrain-page-form-container {
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+}
+
+.bracing-malleotrain-page-form-image {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.bracing-malleotrain-page-form-1 {
+    position: absolute;
+    top: 24.3%;
+    right: 36%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.bracing-malleotrain-page-form-2 {
+    position: absolute;
+    top: 24.4%;
+    right: 2%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.bracing-malleotrain-page-form-3 {
+    position: absolute;
+    top: 40.05%;
+    right: 36%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.bracing-malleotrain-page-form-4 {
+    position: absolute;
+    top: 40.05%;
+    right: 2%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.bracing-malleotrain-page-form-5 {
+    position: absolute;
+    top: 56.05%;
+    right: 36%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.bracing-malleotrain-page-form-6 {
+    position: absolute;
+    top: 71.3%;
+    right: 36%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.bracing-malleotrain-page-form-7 {
+    position: absolute;
+    top: 71.3%;
+    right: 2%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 18%;
+    height: 5.5%;
+    text-align: center;
+}
+
+
+.bracing-pages-submit-btn {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 1.0) 50%, #264a96 50%);
+    background-size: 200% 100%;
+    background-position: 200% 0;
+    transition: background-position .4s ease;
+    width: 80% !important;
+    padding: 5px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    border: 1px solid #264a96;
+    border-radius: 10px;
+    color: #264a96;
+    box-shadow: 0px 2px 6px -1px rgba(0, 0, 0, 0.13);
+    outline: 0;
+    align-self: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    transition: 0.3s;
+    will-change: transform;
+}
+
+.bracing-pages-submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px -2px rgba(182, 157, 230, 0.95);
+    background-position: 100% 0;
+    color: rgb(255, 255, 255);
+    transition: 0.3s;
+}
+
+.bracing-pages-submit-btn:hover:active {
+    transform: scale(0.99);
+}
+
+.bracing-pages-container select+.select2-container {
+    min-width: 90%;
+    max-width: 90%;
+}

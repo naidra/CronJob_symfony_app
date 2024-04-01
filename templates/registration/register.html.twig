@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>DASH System - Mobile user</title>
+        <link rel="stylesheet" href="{{ asset('Lib/fontawesome/css/all.min.css') }}" />
+        <link rel="stylesheet" href="{{ asset('Lib/fontawesome/css/fontawesome.min.css') }}" />
+        <link rel="stylesheet" href="{{ asset('Lib/bootstrap-icons/index.css') }}" />
+        <link rel="stylesheet" href="{{ asset('Lib/bootstrap/bootstrap.min.css') }}" />
+        <link rel="stylesheet" href="{{ asset('Lib/air-datepicker/air-datepicker.css') }}" />
+        <link rel="stylesheet" href="{{ asset('Styles/index.css') }}" />
+        <script src="{{ asset('Scripts/jquery-3.4.1.min.js') }}" defer></script>
+        <script src="{{ asset('Lib/bootstrap/bootstrap.bundle.min.js') }}" defer></script>
+        <script src="{{ asset('css/bootstrap/js/popper.min.js') }}" defer></script>
+        <script src="{{ asset('Scripts/jquery-ui-1.10.3.min.js') }}" defer></script>
+        <script src="{{ asset('Scripts/jquery-confirm.min.js') }}" defer></script>
+        <script src="{{ asset('Scripts/jquery.dataTables.min.js') }}" defer></script>
+        <script src="{{ asset('css/js-snackbar/index.js') }}" defer></script>
+        <link rel="icon" type="image/x-icon" href="{{ asset('images/Dash_tab_logo.png') }}"/>
+    </head>
+
+    <div class="register-container">
+        <div class="register-session">
+            <div class="left">
+                <img class="register-left-logo" src="./images/DASH_LOGO.png">
+            </div>
+            <div class="register-right">
+                <form class="register" method="post">
+                    {{ form_start(form) }}
+                        <h4 class="register-card-title">We are 
+                            <span class="register-card-title-name-highlight">DASH</span>
+                        </h4>
+                        <p class="register-card-content">Welcome back!</p>
+                        <div class="register-floating-label">
+                            {{ form_widget(form.username, {'attr': {'class': 'form-widget-custom-class', 'placeholder': ' '}}) }}
+                            <label class="register-form-label" for="inputUsername">Username:</label>
+                            <div class="register-icon">
+                                <svg width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="register-floating-label">
+                            {{ form_widget(form.email, {'attr': {'class': 'form-widget-custom-class', 'placeholder': ' '}}) }}
+                            <label class="register-form-label" for="inputEmail">Email:</label>
+                            <div class="register-icon">
+                                <svg width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">     
+                                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="register-floating-label">
+                            {{ form_widget(form.plainPassword.first, {'attr': {'class': 'form-widget-custom-class', 'placeholder': ' '}}) }}
+                            <label class="register-form-label" for="inputPassword">Password:</label>
+                            <div class="register-icon">
+                                <svg width="12" height="12" fill="currentColor" class="bi bi-lock" viewBox="0 0 16 16">
+                                    <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="register-floating-label">
+                            {{ form_widget(form.plainPassword.second, {'attr': {'class': 'form-widget-custom-class', 'placeholder': ' '}}) }}
+                            <label class="register-form-label" for="inputRepeatPassword">Repeat Password:</label>
+                            <div class="register-icon">
+                                <svg width="12" height="12" fill="currentColor" class="bi bi-lock" viewBox="0 0 16 16">
+                                    <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="register-floating-label">
+                            <select class="register-user-select-roles" name="user_role" required>
+                                <option selected value="ROLE_MOBILUSER" selected>ROLE_MOBILUSER</option>
+                                {# <option value="ROLE_ADMINOFFICE">ROLE_ADMINOFFICE</option>
+                                <option value="ROLE_WORKSHOPEMPLOYEE">ROLE_WORKSHOPEMPLOYEE</option> #}
+                            </select>
+                            <label class="register-form-label" for="inputSelectRoles">Select Role:</label>
+                            <div class="register-icon">
+                                <svg width="16" height="16" fill="currentColor" class="bi bi-person-plus" viewBox="0 0 16 16">
+                                    <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                                    <path d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <button class="register-button" type="submit">Register</button>
+                        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+                    {{ form_end(form) }}
+                </form>
+            </div>
+        </div>
+    </div>
+</html>

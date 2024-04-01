@@ -1,0 +1,341 @@
+.order-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 75px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 30px;
+}
+
+.order-title-info-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 20px;
+    position: sticky;
+    top: 75px;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.order-modal {
+    display: none;
+    position: fixed;
+    z-index: 5;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.order-modal-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #fefefe;
+    margin: auto;
+    border: 1px solid #888;
+    width: unset;
+    transform: translate(5px, 29px);
+    aspect-ratio: 2 / 1;
+    border-radius: 10px;
+}
+
+.order-modal-close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    align-self: flex-start;
+}
+
+.order-modal-close:hover,
+.order-modal-close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.order-title {
+    font-size: 40px;
+}
+
+.order-info-button {
+    height: 50px;
+    width: 50px;
+    border: 1px solid rgba(196, 196, 196, 1);
+    border-radius: 100%;
+    font-size: 30px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.order-info-button:hover {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(38, 74, 150, 1);
+    transition: .3s ease-in-out;
+}
+
+.order-info-button:active {
+    transform: scale(0.90);
+}
+
+.order-container-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    align-items: center;
+}
+
+.order-product-image-link-container-1 {
+    grid-area: 1 / 1 / 2 / 2;
+    margin: 5%;
+    aspect-ratio: 1/1;
+    border: 2px solid rgba(38, 74, 150, 1);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    text-decoration: none;
+    background-image: url("../images/Order-Images-Selection-400x400_UPDATE_PROSTHESIS.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.order-product-image-link-container-1:hover {
+    transform: scale( 110%);
+    transition: 0.3s ease-in-out;
+}
+
+.order-product-image-link-container-1:active {
+    transform: scale( 100%);
+    transition: 0.3s ease-in-out;
+}
+
+.order-product-image-link-container-2 {
+    grid-area: 1 / 2 / 2 / 3;
+    margin: 5%;
+    aspect-ratio: 1/1;
+    border: 2px solid rgba(38, 74, 150, 1);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    text-decoration: none;
+    background-image: url("../images/Order-Images-Selection-400x400_UPDATE_ORTHOSIS.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.order-product-image-link-container-2:hover {
+    transform: scale( 110%);
+    transition: 0.3s ease-in-out;
+}
+
+.order-product-image-link-container-2:active {
+    transform: scale( 100%);
+    transition: 0.3s ease-in-out;
+}
+
+.order-product-image-link-container-3 {
+    grid-area: 1 / 3 / 2 / 4;
+    margin: 5%;
+    aspect-ratio: 1/1;
+    border: 2px solid rgba(38, 74, 150, 1);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    text-decoration: none;
+    background-image: url("../images/Order-Images-Selection-400x400_UPDATE_BRACING.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.order-product-image-link-container-3:hover {
+    transform: scale( 110%);
+    transition: 0.3s ease-in-out;
+}
+
+.order-product-image-link-container-3:active {
+    transform: scale( 100%);
+    transition: 0.3s ease-in-out;
+}
+
+.order-product-image-link-container-4 {
+    grid-area: 2 / 1 / 3 / 2;
+    margin: 5%;
+    aspect-ratio: 1/1;
+    border: 2px solid rgba(38, 74, 150, 1);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    text-decoration: none;
+    background-image: url("../images/Order-Images-Selection-400x400_UPDATE_SHOES.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.order-product-image-link-container-4:hover {
+    transform: scale( 110%);
+    transition: 0.3s ease-in-out;
+}
+
+.order-product-image-link-container-4:active {
+    transform: scale( 100%);
+    transition: 0.3s ease-in-out;
+}
+
+.order-product-image-link-container-5 {
+    grid-area: 2 / 2 / 3 / 3;
+    margin: 5%;
+    aspect-ratio: 1/1;
+    border: 2px solid rgba(38, 74, 150, 1);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    text-decoration: none;
+    background-image: url("../images/Order-Images-Selection-400x400_UPDATE_INSOLES.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.order-product-image-link-container-5:hover {
+    transform: scale( 110%);
+    transition: 0.3s ease-in-out;
+}
+
+.order-product-image-link-container-5:active {
+    transform: scale( 100%);
+    transition: 0.3s ease-in-out;
+}
+
+.order-product-image-link-container-6 {
+    grid-area: 2 / 3 / 3 / 4;
+    margin: 5%;
+    aspect-ratio: 1/1;
+    border: 2px solid rgba(38, 74, 150, 1);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    text-decoration: none;
+    background-image: url("../images/Order-Images-Selection-400x400_UPDATE_WHEELCHAIRS.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.order-product-image-link-container-6:hover {
+    transform: scale( 110%);
+    transition: 0.3s ease-in-out;
+}
+
+.order-product-image-link-container-6:active {
+    transform: scale( 100%);
+    transition: 0.3s ease-in-out;
+}
+
+.order-product-image-link-container-7 {
+    grid-area: 3 / 1 / 4 / 2;
+    margin: 5%;
+    aspect-ratio: 1/1;
+    border: 2px solid rgba(38, 74, 150, 1);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    text-decoration: none;
+    background-image: url("../images/Order-Images-Selection-400x400_UPDATE_PRESSURE-GARMENTS.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.order-product-image-link-container-7:hover {
+    transform: scale( 110%);
+    transition: 0.3s ease-in-out;
+}
+
+.order-product-image-link-container-7:active {
+    transform: scale( 100%);
+    transition: 0.3s ease-in-out;
+}
+
+.order-product-image-link-container-8 {
+    grid-area: 3 / 2 / 4 / 3; 
+    margin: 5%;
+    aspect-ratio: 1/1;
+    border: 2px solid rgba(38, 74, 150, 1);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    text-decoration: none;
+    background-image: url("../images/Order-Images-Selection-400x400_UPDATE_DME.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.order-product-image-link-container-8:hover {
+    transform: scale( 110%);
+    transition: 0.3s ease-in-out;
+}
+
+.order-product-image-link-container-8:active {
+    transform: scale( 100%);
+    transition: 0.3s ease-in-out;
+}
+
+.order-product-image-link-container-9 {
+    grid-area: 3 / 3 / 4 / 4;
+    margin: 5%;
+    aspect-ratio: 1/1;
+    border: 2px solid rgba(38, 74, 150, 1);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    text-decoration: none;
+    background-image: url("../images/others.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.order-product-image-link-container-9:hover {
+    transform: scale( 110%);
+    transition: 0.3s ease-in-out;
+}
+
+.order-product-image-link-container-9:active {
+    transform: scale( 100%);
+    transition: 0.3s ease-in-out;
+}
+
+.order-product-image-link {
+    aspect-ratio: 1/1;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+}
+
+.order-product-image-title {
+    font-size: 30px;
+    font-weight: 700;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 1);
+    margin: 0px;
+    align-self: center;
+}
+
+.order-product-image {
+    height: auto;
+    width: auto;
+    object-fit: cover;
+    align-self: center;
+    justify-content: center;
+}

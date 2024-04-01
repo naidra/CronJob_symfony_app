@@ -1,0 +1,331 @@
+.hip-disarticulation-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 75px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 30px;
+}
+
+.hip-disarticulation-title-info-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: sticky;
+    top: 75px;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.hip-disarticulation-modal {
+    display: none;
+    position: fixed;
+    z-index: 5;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hip-disarticulation-modal-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: unset;
+    transform: translate(5px, 29px);
+    aspect-ratio: 2 / 1;
+    border-radius: 10px;
+}
+
+.hip-disarticulation-modal-close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    align-self: flex-start;
+}
+
+.hip-disarticulation-modal-close:hover,
+.hip-disarticulation-modal-close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.hip-disarticulation-title {
+    font-size: 40px;
+}
+
+.hip-disarticulation-download-pdf-button {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 1.0) 50%, #264a96 50%);
+    background-size: 200% 100%;
+    background-position: 200% 0;
+    transition: background-position .4s ease;
+    width: 35% !important;
+    padding: 5px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    border: 1px solid #264a96;
+    border-radius: 10px;
+    color: #264a96;
+    box-shadow: 0px 2px 6px -1px rgba(0, 0, 0, 0.13);
+    outline: 0;
+    align-self: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    transition: 0.3s
+}
+
+.hip-disarticulation-download-pdf-button:hover {
+    box-shadow: 0 4px 12px -2px rgba(182, 157, 230, 0.95);
+    background-position: 100% 0;
+    color: rgb(255, 255, 255);
+    transition: 0.3s;
+}
+
+.hip-disarticulation-download-pdf-button:hover:active {
+    transform: scale(0.95);
+}
+
+.hip-disarticulation-info-button {
+    height: 50px;
+    width: 50px;
+    border: 1px solid rgba(196, 196, 196, 1);
+    border-radius: 100%;
+    font-size: 30px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.hip-disarticulation-info-button:hover {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(38, 74, 150, 1);
+    transition: .3s ease-in-out;
+}
+
+.hip-disarticulation-info-button:active {
+    transform: scale(0.90);
+}
+
+.hip-disarticulation-label-input-container-aligment {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.hip-disarticulation-table {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+.hip-disarticulation-table-header{
+    padding: 10px;
+    margin: 0px;
+    font-size: 20px;
+}
+
+.hip-disarticulation-table-data-label {
+    border: 1px solid rgb(196, 196, 196);
+    padding: 10px;
+}
+
+.hip-disarticulation-table-data-checkbox-label {
+    margin: 0px;
+    font-size: 15px;
+}
+
+.hip-disarticulation-table-data-input-container {
+    border: 1px solid rgb(196, 196, 196);
+}
+
+.hip-disarticulation-table-data-input {
+    border: none;
+    padding: 10px;
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+    font-size: 15px;
+}
+
+.hip-disarticulation-table-data-checkbox-container {
+    border: 1px solid rgb(196, 196, 196);
+    padding: 10px;
+    margin: auto;
+}
+
+.hip-disarticulation-table-data-checkbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    width: 70%;
+}
+
+.hip-disarticulation-table-data-checkbox-label {
+    margin: 0px;
+    font-size: 15px;
+    align-self: center;
+}
+
+.hip-disarticulation-table-data-checkbox-input {
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+    align-self: center;
+    cursor: pointer;
+}
+
+.hip-disarticulation-form-container{
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+}
+
+.hip-disarticulation-form-image {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.hip-disarticulation-prosthetics-form-1 {
+    position: absolute;
+    top: 40.3%;
+    left: 25.5%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 12%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.hip-disarticulation-prosthetics-form-2 {
+    position: absolute;
+    top: 57.7%;
+    left: 9.8%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 12%;
+    height: 5.3%;
+    text-align: center;
+}
+
+.hip-disarticulation-prosthetics-form-3 {
+    position: absolute;
+    top: 72%;
+    left: 25.5%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 5px;
+    width: 12%;
+    height: 5.3%;
+    text-align: center;
+}
+
+.hip-disarticulation-prosthetics-form-4 {
+    position: absolute;
+    top: 7.6%;
+    right: 10.5%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 30px;
+    padding: 5px;
+    width: 12%;
+    height: 4.5%;
+    text-align: center;
+}
+
+.hip-disarticulation-prosthetics-form-5 {
+    position: absolute;
+    top: 21.9%;
+    right: 10.5%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 30px;
+    padding: 5px;
+    width: 12%;
+    height: 4.5%;
+    text-align: center;
+}
+
+.hip-disarticulation-prosthetics-form-6 {
+    position: absolute;
+    top: 65.8%;
+    right: 30%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 30px;
+    padding: 5px;
+    width: 12%;
+    height: 4.5%;
+    text-align: center;
+}
+
+.hip-disarticulation-prosthetics-form-7 {
+    position: absolute;
+    top: 76.6%;
+    right: 30%;
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 30px;
+    padding: 5px;
+    width: 12%;
+    height: 4.5%;
+    text-align: center;
+}
+
+.hip-disarticulation-submit-btn {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 1.0) 50%, #264a96 50%);
+    background-size: 200% 100%;
+    background-position: 200% 0;
+    transition: background-position .4s ease;
+    width: 80% !important;
+    padding: 5px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    border: 1px solid #264a96;
+    border-radius: 10px;
+    color: #264a96;
+    box-shadow: 0px 2px 6px -1px rgba(0, 0, 0, 0.13);
+    outline: 0;
+    align-self: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    transition: 0.3s;
+    will-change: transform;
+}
+
+.hip-disarticulation-submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px -2px rgba(182, 157, 230, 0.95);
+    background-position: 100% 0;
+    color: rgb(255, 255, 255);
+    transition: 0.3s;
+}
+
+.hip-disarticulation-submit-btn:hover:active {
+    transform: scale(0.99);
+}
+
+.hip-disarticulation-container select+.select2-container {
+    min-width: 100%;
+    max-width: 100%;
+}

@@ -1,0 +1,125 @@
+{% extends 'ag_base/backend.html.twig' %}
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}
+
+{% block container %}
+	<div class="statistics-container mb-4 mb-md-5">  
+        <div id="Modal" class="statistics-modal">
+            <div class="container">
+				<div class="row justify-content-lg-end">
+					<div class="col-lg-9 px-lg-5 pt-lg-4">
+						<div class="patient-data-modal-content">
+							<div>
+								<h3 class="mb-3">Information Data</h3>
+								<p>Home page data</p>
+							</div>
+							<span id="Close_span" class="statistics-modal-close">&times;</span>
+						</div>
+					</div>
+				</div>
+			</div>
+        </div>
+        <div class="can-be-sticky statistics-title-info-container px-0">
+            <h3 class="statistics-title">Url-s scheduled</h3>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="overflow-auto">
+                    <table class="w-100">
+                        <thead>
+                            <tr>
+                                <th class="border-bottom fw-500 pe-3">Url</th>
+                                <th class="border-bottom fw-500 pe-3">Interval</th>
+                                <th class="border-bottom fw-500 pe-3">Type</th>
+                                <th class="border-bottom fw-500">Next call at</th>
+                                <th class="border-bottom fw-500"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for schedule in schedule_data %}
+                                <tr>
+                                    <td class="border-bottom text-nowrap py-1 pe-3">{{ schedule.schedule_url }}</td>
+                                    <td class="border-bottom text-nowrap py-1 pe-3">{{ schedule.schedule_interval }}</td>
+                                    <td class="border-bottom text-nowrap py-1 pe-3">{{ schedule.schedule_req_type }}</td>
+                                    {# format to show only year month day hours and minutes #}
+                                    <td class="border-bottom text-nowrap py-1 pe-3">{{ schedule.url_called_at ? schedule.url_called_at|date_modify("+" ~ schedule.schedule_interval)|date("Y-m-d H:i") : '---' }}</td>
+                                    <td class="border-bottom text-nowrap py-1">
+                                        <a href="{{ path('delete_schedule', { 'id': schedule.id }) }}" class="text-decoration-none text-danger d-flex align-items-center fw-500 px-2 py-0" onclick="return confirm('Do you want to delete this row?')">
+                                            <i class="fa fa-trash me-1" aria-hidden="true"></i>
+                                            Delete
+                                        </a>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-md-6 pt-5">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="h4 accordion-button m-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Add new schedule
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <form action="{{ path('save_schedule') }}" method="POST">
+                                    <fieldset class="d-flex flex-column">
+                                        <div class="d-flex flex-column-reverse has-floating-label flex-grow-1 mb-3">
+                                            <input class="form-control border-radius-10 min-height-45" type="url" id="url" name="url" placeholder=" " required />
+                                            <p class="the-label fw-500 font-size-16 m-0">Url to call</p>
+                                        </div>
+                                        <div class="d-flex flex-column flex-grow-1 mb-3">
+                                            <div class="d-flex flex-column-reverse has-floating-label">
+                                                <input class="form-control border-radius-10 min-height-45" type="text" id="interval" name="interval" placeholder=" " title="P.s 2 hours" required />
+                                                <p class="the-label fw-500 font-size-16 m-0">Hours (interval)</p>
+                                            </div>
+                                            <small>P.s: (1 hours, 2 hours, 3 hours)</small>
+                                        </div>
+                                        <div class="d-flex flex-column-reverse has-floating-label flex-grow-1 mb-3">
+                                            <select class="form-control border-radius-10 min-height-45" id="req_type" name="req_type">
+                                                <option value="GET">GET</option>
+                                                <option value="POST">POST</option>
+                                            </select>
+                                            <p class="the-label fw-500 font-size-16 m-0">Url to call</p>
+                                        </div>
+                                    </fieldset>
+                                    <button type="submit" class="btn btn-primary border-radius-10 px-3"><i class="fa fa-save me-2" aria-hidden="true"></i>Save</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const socket = new WebSocket(location.origin.replace('https', 'ws').replace(':8000', '') + ':3001'); // for localhost
+        // const socket = new WebSocket(location.origin.replace('https', 'wss').replace(':8000', '') + '/wss/'); // for server
+        socket.addEventListener("open", function() {
+            console.log("CONNECTED");
+        });
+        // Listen for messages
+        socket.addEventListener('message', async function (event) {
+            try{
+                const response = JSON.parse(event.data);
+                if (typeof response === 'object' && response !== null) {
+                    const { message, status, tables_changed, tables } = response;
+                    
+                    console.log('Websocket message: ', message);
+                }
+            } catch(e) {
+                console.log(event.data);
+            }
+        });
+        // Listen for errors
+        socket.addEventListener('error', function (error) {
+            console.log('Error from server.');
+            console.error(error.data);
+        });
+    </script>
+{% endblock %}

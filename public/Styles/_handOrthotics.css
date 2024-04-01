@@ -1,0 +1,991 @@
+.hand-orthotics-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 75px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 30px;
+}
+
+.hand-orthotics-title-info-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: sticky;
+    top: 75px;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.hand-orthotics-modal {
+    display: none;
+    position: fixed;
+    z-index: 5;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hand-orthotics-modal-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: unset;
+    transform: translate(5px, 29px);
+    aspect-ratio: 2 / 1;
+    border-radius: 10px;
+}
+
+.hand-orthotics-modal-close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    align-self: flex-start;
+}
+
+.hand-orthotics-modal-close:hover,
+.hand-orthotics-modal-close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.hand-orthotics-title {
+    font-size: 40px;
+}
+
+.hand-orthotics-info-button {
+    height: 50px;
+    width: 50px;
+    border: 1px solid rgba(196, 196, 196, 1);
+    border-radius: 100%;
+    font-size: 30px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.hand-orthotics-info-button:hover {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(38, 74, 150, 1);
+    transition: .3s ease-in-out;
+}
+
+.hand-orthotics-info-button:active {
+    transform: scale(0.90);
+}
+
+.hand-orthotics-label-input-container-aligment {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.hand-orthotics-title-container-1 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.hand-orthotics-title-1{
+    grid-area: 1 / 1 / 2 / 2;
+    text-decoration: none;
+    margin: 0px;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding: 2px;
+}
+
+.hand-orthotics-title-2{
+    grid-area: 1 / 2 / 2 / 3; 
+    text-decoration: none;
+    margin: 0px;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding: 2px;
+}
+
+.hand-orthotics-title-3{
+    grid-area: 1 / 3 / 2 / 4; 
+    text-decoration: none;
+    margin: 0px;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding: 2px;
+}
+
+.hand-orthotics-title-4{
+    grid-area: 1 / 4 / 2 / 5;
+    text-decoration: none;
+    margin: 0px;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding: 2px;
+}
+
+.hand-orthotics-title-5{
+    grid-area: 1 / 5 / 2 / 6;
+    text-decoration: none;
+    margin: 0px;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding: 2px;
+}
+
+.hand-orthotics-label-input-container-row-1 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.hand-orthotics-label-input-container-row-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) repeat(2, 1.5fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin-top: 10px;
+}
+
+.hand-orthotics-buttons-container-row-3 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) repeat(2, 1.5fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin-top: 10px;
+}
+
+.hand-orthotics-label-1 {
+    grid-area: 1 / 1 / 2 / 2;
+    text-decoration: none;
+    margin: 0px;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hand-orthotics-input-1 {
+    grid-area: 1 / 1 / 2 / 2;
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 10px;
+    width: 90%;
+}
+
+.hand-orthotics-checkbox-container {
+    grid-area: 1 / 2 / 2 / 3;
+    padding: 10px;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.hand-orthotics-checkbox-left-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.hand-orthotics-checkbox-right-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.hand-orthotics-checkbox-left-label {
+    padding-right: 5px;
+    align-self: center;
+}
+
+.hand-orthotics-checkbox-left-input {
+    margin: 0px;
+    padding: 0px;
+    align-self: center;
+}
+
+.hand-orthotics-checkbox-right-label {
+    padding-right: 5px;
+    align-self: center;
+}
+
+.hand-orthotics-checkbox-right-input {
+    margin: 0px;
+    padding: 0px;
+    align-self: center;
+}
+
+.hand-orthotics-input-select {
+    grid-area: 1 / 4 / 2 / 5;
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 10px;
+    width: 90%;
+    height: 46px;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: none;
+}
+
+.hand-orthotics-label-2 {
+    grid-area: 1 / 3 / 2 / 4;
+    text-decoration: none;
+    margin: 0px;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hand-orthotics-input-2 {
+    grid-area: 1 / 2 / 2 / 3;
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 10px;
+    width: 90%;
+}
+
+.hand-orthotics-input-3 {
+    grid-area: 1 / 3 / 2 / 4; 
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 10px;
+    width: 90%;
+}
+
+.hand-orthotics-input-4 {
+    grid-area: 1 / 4 / 2 / 5; 
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 10px;
+    width: 90%;
+}
+
+.hand-orthotics-input-5 {
+    grid-area: 1 / 5 / 2 / 6;
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 10px;
+    width: 90%;
+}
+
+.hand-orthotics-input-6 {
+    grid-area: 1 / 3 / 2 / 5;
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    padding: 10px;
+    width: 96.6%;
+}
+
+.hand-orthotics-upload-pdf-button-container {
+    grid-area: 1 / 3 / 2 / 4;
+    flex-direction: row;
+    margin: 0px;
+}
+
+.hand-orthotics-upload-pdf-button {
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    width: 93.5%;
+    height: 46px;
+    transition: .3s ease-in-out;
+    margin: 0px;
+    padding: 0px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.hand-orthotics-upload-pdf-button:hover {
+    color: rgba(38, 74, 150, 1);
+    border: 1px solid rgba(38, 74, 150, 1);
+}
+
+.hand-orthotics-upload-pdf-button:hover:active {
+    transform: scale(0.90);
+    transition: .3s ease-in-out;
+}
+
+
+.hand-orthotics-download-pdf-button-container {
+    grid-area: 1 / 4 / 2 / 5;
+    flex-direction: row;
+    margin: 0px;
+}
+
+.hand-orthotics-download-pdf-button {
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    width: 93.6%;
+    height: 46px;
+    transition: .3s ease-in-out;
+    margin: 0px;
+    padding: 0px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.hand-orthotics-download-pdf-button:hover {
+    color: rgba(38, 74, 150, 1);
+    border: 1px solid rgba(38, 74, 150, 1);
+}
+
+.hand-orthotics-download-pdf-button:hover:active {
+    transform: scale(0.90);
+    transition: .3s ease-in-out;
+}
+
+.pdf-version-container-aligment {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.pdf-version-container {
+    width: 95.8%;
+    border: 1px solid rgb(196, 196, 196);
+    margin-left: 20px;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    overflow:auto;
+}
+
+.pdf-version-body {
+    height: 100%;
+    width: 12%;
+    min-width: 191px !important;
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    min-width: fit-content;
+    padding: 0px 5px;
+    transition: .3s ease-in-out;
+    position: relative;
+}
+
+.pdf-version-body:active {
+    transform: scale(90%);
+    transition: .3s ease-in-out;
+}
+
+.pdf-version-title-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.pdf-version-title {
+    color: rgba(50, 50, 50, 1);
+    font-weight: 300;
+    margin:0px;
+}
+
+.pdf-version-version-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.pdf-version-version {
+    color: rgba(50, 50, 50, 1);
+    font-weight: 300;
+}
+
+.pdf-version-date-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.pdf-version-date {
+    color: rgba(50, 50, 50, 1);
+    font-weight: 300;
+}
+
+.hand-orthotics-table {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+.hand-orthotics-table-header{
+    padding: 10px;
+    margin: 0px;
+    font-size: 20px;
+}
+
+.hand-orthotics-table-data-label {
+    border: 1px solid rgb(196, 196, 196);
+    padding: 10px;
+}
+
+.hand-orthotics-table-data-checkbox-label {
+    margin: 0px;
+    font-size: 15px;
+}
+
+.hand-orthotics-table-data-input-container {
+    border: 1px solid rgb(196, 196, 196);
+}
+
+.hand-orthotics-table-data-input {
+    border: none;
+    padding: 10px;
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+    font-size: 15px;
+}
+
+.hand-orthotics-table-data-checkbox-container {
+    border: 1px solid rgb(196, 196, 196);
+    padding: 10px;
+    margin: auto;
+}
+
+.hand-orthotics-table-data-checkbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    width: 70%;
+}
+
+.hand-orthotics-table-data-checkbox-label {
+    margin: 0px;
+    font-size: 15px;
+    align-self: center;
+}
+
+.hand-orthotics-table-data-checkbox-input {
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+    align-self: center;
+    cursor: pointer;
+}
+
+.hand-orthotics-form-container{
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+}
+
+.hand-orthotics-form-image-1 {
+    display: block;
+    height: 100%;
+    width: 100%;
+    margin-top: 30px;
+    padding-top: 10px;
+}
+
+.hand-orthotics-form-image-2 {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.hand-orthotics-form-1 {
+    position: absolute;
+    background-color: transparent;
+    top: 1.62%;
+    left: 48.2%;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    width: 9%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.hand-orthotics-form-1:focus {
+    border: none;
+    outline: none;
+}
+
+.hand-orthotics-form-2 {
+    position: absolute;
+    background-color: transparent;
+    top: 30%;
+    left: 25.85%;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    width: 9%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.hand-orthotics-form-2:focus {
+    border: none;
+    outline: none;
+}
+
+
+.hand-orthotics-form-3 {
+    position: absolute;
+    background-color: transparent;
+    top: 35.98%;
+    left: 51%;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    width: 9%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.hand-orthotics-form-3:focus {
+    border: none;
+    outline: none;
+}
+
+.hand-orthotics-form-4 {
+    position: absolute;
+    background-color: transparent;
+    top: 19.7%;
+    right: 26.9%;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    width: 9%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.hand-orthotics-form-4:focus {
+    border: none;
+    outline: none;
+}
+
+.hand-orthotics-form-5 {
+    position: absolute;
+    background-color: transparent;
+    top: 52%;
+    right: 28%;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    width: 9%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.hand-orthotics-form-5:focus {
+    border: none;
+    outline: none;
+}
+
+.hand-orthotics-form-6 {
+    position: absolute;
+    background-color: transparent;
+    top: 76.1%;
+    right: 28%;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    width: 9%;
+    height: 5.5%;
+    text-align: center;
+}
+
+.hand-orthotics-form-6:focus {
+    border: none;
+    outline: none;
+}
+
+.hand-orthotics-form-7 {
+    position: absolute;
+    background-color: transparent;
+    top: 3.3%;
+    left: 31.4%;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    width: 9%;
+    height: 3.5%;
+    text-align: center;
+}
+
+.hand-orthotics-form-7:focus {
+    border: none;
+    outline: none;
+}
+
+.hand-orthotics-form-8 {
+    position: absolute;
+    background-color: transparent;
+    top: 24.4%;
+    left: 26.2%;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    width: 9%;
+    height: 3.5%;
+    text-align: center;
+}
+
+.hand-orthotics-form-8:focus {
+    border: none;
+    outline: none;
+}
+
+.hand-orthotics-form-9 {
+    position: absolute;
+    background-color: transparent;
+    top: 42.2%;
+    left: 26.2%;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    width: 9%;
+    height: 3.5%;
+    text-align: center;
+}
+
+.hand-orthotics-form-9:focus {
+    border: none;
+    outline: none;
+}
+
+.hand-orthotics-form-10 {
+    position: absolute;
+    background-color: transparent;
+    top: 47.7%;
+    left: 26.2%;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    width: 9%;
+    height: 3.5%;
+    text-align: center;
+}
+
+.hand-orthotics-form-10:focus {
+    border: none;
+    outline: none;
+}
+
+.hand-orthotics-form-11 {
+    position: absolute;
+    background-color: transparent;
+    top: 60.2%;
+    left: 26.4%;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    width: 9%;
+    height: 3.5%;
+    text-align: center;
+}
+
+.hand-orthotics-form-11:focus {
+    border: none;
+    outline: none;
+}
+
+.hand-orthotics-form-12 {
+    position: absolute;
+    background-color: transparent;
+    top: 84.56%;
+    left: 26.5%;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    width: 9%;
+    height: 3.5%;
+    text-align: center;
+}
+
+.hand-orthotics-form-12:focus {
+    border: none;
+    outline: none;
+}
+
+.hand-orthotics-form-13 {
+    position: absolute;
+    background-color: transparent;
+    top: 95.78%;
+    left: 26.5%;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    width: 9%;
+    height: 3.5%;
+    text-align: center;
+}
+
+.hand-orthotics-form-13:focus {
+    border: none;
+    outline: none;
+}
+
+.hand-orthotics-form-14 {
+    position: absolute;
+    background-color: transparent;
+    top: 13.2%;
+    left: 54.3%;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    width: 9%;
+    height: 3.5%;
+    text-align: center;
+}
+
+.hand-orthotics-form-14:focus {
+    border: none;
+    outline: none;
+}
+
+.hand-orthotics-form-15 {
+    position: absolute;
+    background-color: transparent;
+    top: 26.6%;
+    left: 54.3%;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    width: 9%;
+    height: 3.5%;
+    text-align: center;
+}
+
+.hand-orthotics-form-15:focus {
+    border: none;
+    outline: none;
+}
+
+.hand-orthotics-form-16 {
+    position: absolute;
+    background-color: transparent;
+    top: 42.1%;
+    left: 54.3%;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    width: 9%;
+    height: 3.5%;
+    text-align: center;
+}
+
+.hand-orthotics-form-16:focus {
+    border: none;
+    outline: none;
+}
+
+.hand-orthotics-form-17 {
+    position: absolute;
+    background-color: transparent;
+    top: 49.7%;
+    left: 54.3%;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    width: 9%;
+    height: 3.5%;
+    text-align: center;
+}
+
+.hand-orthotics-form-17:focus {
+    border: none;
+    outline: none;
+}
+
+.hand-orthotics-form-18 {
+    position: absolute;
+    background-color: transparent;
+    top: 62.1%;
+    left: 54.3%;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    width: 9%;
+    height: 3.5%;
+    text-align: center;
+}
+
+.hand-orthotics-form-18:focus {
+    border: none;
+    outline: none;
+}
+
+.hand-orthotics-form-19 {
+    position: absolute;
+    background-color: transparent;
+    top: 84.2%;
+    left: 53%;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    width: 9%;
+    height: 3.5%;
+    text-align: center;
+}
+
+.hand-orthotics-form-19:focus {
+    border: none;
+    outline: none;
+}
+
+.hand-orthotics-form-20 {
+    position: absolute;
+    background-color: transparent;
+    top: 4%;
+    right: 14.49%;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    width: 9%;
+    height: 3.5%;
+    text-align: center;
+}
+
+.hand-orthotics-form-20:focus {
+    border: none;
+    outline: none;
+}
+
+.hand-orthotics-form-21 {
+    position: absolute;
+    background-color: transparent;
+    top: 8.55%;
+    right: 14.49%;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    width: 9%;
+    height: 3.5%;
+    text-align: center;
+}
+
+.hand-orthotics-form-21:focus {
+    border: none;
+    outline: none;
+}
+
+.hand-orthotics-form-22 {
+    position: absolute;
+    background-color: transparent;
+    top: 47.28%;
+    right: 14.49%;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    width: 9%;
+    height: 3.5%;
+    text-align: center;
+}
+
+.hand-orthotics-form-22:focus {
+    border: none;
+    outline: none;
+}
+
+.hand-orthotics-form-23 {
+    position: absolute;
+    background-color: transparent;
+    top: 86.4%;
+    right: 27.49%;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    width: 9%;
+    height: 3.5%;
+    text-align: center;
+}
+
+.hand-orthotics-form-23:focus {
+    border: none;
+    outline: none;
+}
+
+.hand-orthotics-form-24 {
+    position: absolute;
+    background-color: transparent;
+    top: 95.79%;
+    right: 14.49%;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    width: 9%;
+    height: 3.5%;
+    text-align: center;
+}
+
+.hand-orthotics-form-24:focus {
+    border: none;
+    outline: none;
+}
+
+.hand-orthotics-submit-btn {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 1.0) 50%,rgba(38, 74, 150, 1) 50%);
+    background-size: 200% 100%;
+    background-position: 200% 0;
+    transition: background-position .4s ease;
+    width: 80% !important;
+    padding: 5px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    border: 1px solid rgba(38, 74, 150, 1);
+    border-radius: 10px;
+    color:rgba(38, 74, 150, 1);
+    box-shadow: 0px 2px 6px -1px rgba(0, 0, 0, 0.13);
+    outline: 0;
+    align-self: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    transition: 0.3s;
+    will-change: transform;
+}
+
+.hand-orthotics-submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px -2px rgba(182, 157, 230, 0.95);
+    background-position: 100% 0;
+    color: rgb(255, 255, 255);
+    transition: 0.3s;
+}
+
+.hand-orthotics-submit-btn:hover:active {
+    transform: scale(0.99);
+}
+
+.hand-orthotics-container select+.select2-container {
+    min-width: 90%;
+    max-width: 90%;
+}
