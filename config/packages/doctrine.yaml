@@ -4,10 +4,15 @@ doctrine:
         default_connection:       default
         connections:
             default:
-                dbname:           cron_job_symfony_app_db
-                user:             root
-                password:         null
-                host:             127.0.0.1
+                # dbname:           cron_job_symfony_app_db
+                # user:             root
+                # password:         null
+                # host:             127.0.0.1
+                # server_version:   'mariadb-10.4.11'
+                dbname:           ezyro_36280236_cron_job_symfony_app_db
+                user:             ezyro_36280236
+                password:         49477a0a1
+                host:             sql309.ezyro.com
                 server_version:   'mariadb-10.4.11'
                 
         # IMPORTANT: You MUST configure your server version,

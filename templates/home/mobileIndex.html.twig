@@ -98,8 +98,8 @@
     </div>
 
     <script>
-        const socket = new WebSocket(location.origin.replace('https', 'ws').replace(':8000', '') + ':3001'); // for localhost
-        // const socket = new WebSocket(location.origin.replace('https', 'wss').replace(':8000', '') + '/wss/'); // for server
+        // const socket = new WebSocket(location.origin.replace('https', 'ws').replace(':8000', '') + ':3001'); // for localhost
+        const socket = new WebSocket(location.origin.replace('https', 'wss').replace(':8000', '') + '/wss/'); // for server
         socket.addEventListener("open", function() {
             console.log("CONNECTED");
         });
